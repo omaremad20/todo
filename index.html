@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>WorkShop</title>
+</head>
+<body>
+   
+      <header>Todo List </header>
+      <div class="app-wrapper">
+        <div class="addAndFilter container">
+          <div class="row gy-4 justify-content-center">
+            <div class="col-md-5">
+              <input oninput="inputRegex(this.value)" id="taskInput" type="text" class="form-control" placeholder="Add What You Need To do" value="">
+              <p id="alertmsg" class="alert m-0 p-0 mt-1 ms-1 text-danger d-none">This Task Is Already Taken Please Put a Diffrent Task...</p>
+            </div>
+            <div class="col-md-5">
+              <select  class="form-select" id ="mySelect" aria-label="Default select example">
+                <option  value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted" id="completed">Uncompleted</option>
+              </select>
+            </div>
+            <input oninput="searching(this.value)" type="search" class="form-control" placeholder="Search By Task Name" id="searchInput">
+            <button onclick="addTodo()" id="todo-button" class="btn btn-success w-50 mt-4" >Add Todo</button>
+            
+          </div>
+         
+        </div>
+        
+        <div class="todos-wrapper container mt-5">
+          <div class="row  gy-4 justify-content-center" id="todos-container">
+ 
+           
+          </div>
+          
+        </div>
+      </div>
+
+
+      <script src="./js/index.js"></script>
+</body>
+</html>
